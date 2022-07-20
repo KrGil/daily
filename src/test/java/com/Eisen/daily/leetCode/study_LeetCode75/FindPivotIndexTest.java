@@ -1,4 +1,4 @@
-package com.Eisen.daily.study_LeetCode75;
+package com.Eisen.daily.leetCode.study_LeetCode75;
 
 import com.Eisen.daily.leetCode.study_LeetCode75.FindPivotIndex;
 import org.junit.jupiter.api.Test;
