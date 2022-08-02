@@ -29,17 +29,28 @@ public class FizzBuzz {
 //        return strArray;
 //    }
     /* intStream  */
-    public List<String> fizzBuzz(int n){
-        return IntStream.rangeClosed(1, n)
-            .mapToObj(x -> x % 3 == 0 ? (x % 5 == 0 ? "FizzBuzz" : "Fizz") : (x % 5 == 0 ? "Buzz" : String.valueOf(x)))
-            .collect(Collectors.toList());
-    }
+//    public List<String> fizzBuzz(int n){
+//        return IntStream.rangeClosed(1, n)
+//            .mapToObj(x -> x % 3 == 0 ? (x % 5 == 0 ? "FizzBuzz" : "Fizz") : (x % 5 == 0 ? "Buzz" : String.valueOf(x)))
+//            .collect(Collectors.toList());
+//    }
 
     /* Stream */
-//    public List<String> fizzBuzz(int n ){
-//        return Stream
-//            .iterate(1, i -> i+1)
-//            .limit(n)
-//            .map(() -> {})
-//    }
+    public List<String> fizzBuzz(int n ){
+        return Stream
+            .iterate(1, i -> i+1)
+            .limit(n)
+            .map(i -> {
+                if(i % 3 == 0 && i % 5 == 0){
+                    return "FizzBuzz";
+                }else if (i % 3 == 0){
+                    return "Fizz";
+                }else if (i % 5 == 0){
+                    return "Buzz";
+                }else{
+                    return String.valueOf(i);
+                }
+            })
+            .collect(Collectors.toList());
+    }
 }
