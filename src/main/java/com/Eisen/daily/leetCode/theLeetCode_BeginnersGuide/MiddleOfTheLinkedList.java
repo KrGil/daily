@@ -14,6 +14,7 @@ public class MiddleOfTheLinkedList {
      */
 
     public ListNode middleNode(ListNode head) {
+
         return head;
     }
     public static class ListNode {
