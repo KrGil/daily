@@ -9,8 +9,8 @@ class RansomNoteTest {
     @Test
     void isCreateRansomeNote(){
         RansomNote note = new RansomNote();
-        String ransome = "aab";
-        String magazine = "baa";
+        String ransome = "a";
+        String magazine = "b";
 
         System.out.println(note.canConstruct(ransome, magazine));
     }
