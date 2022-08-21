@@ -16,22 +16,22 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 2022/08/19                eisen             최초 생성
  */
 public class Hexadecimal {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
         StringBuffer sb = new StringBuffer();
 
-        while(st.countTokens() != 0){
+        while (st.countTokens() != 0) {
             sb.append(solution(st.nextToken()));
         }
         System.out.println(sb);
     }
 
-    public static int solution(String str){
+    public static int solution(String str) {
         AtomicInteger atom = new AtomicInteger();
         StringBuilder sb = new StringBuilder();
-        for (char  a: str.toCharArray()) {
+        for (char a : str.toCharArray()) {
             sb.append(a);
         }
         sb.reverse();
@@ -39,20 +39,20 @@ public class Hexadecimal {
                 .map(e -> {
                     int index = atom.getAndIncrement();
                     int firstNum = 0;
-                    int secondNum = (int)Math.pow(16, index);
-                    if(e == ('A')){
+                    int secondNum = (int) Math.pow(16, index);
+                    if (e == ('A')) {
                         firstNum = 10;
-                    }else if(e == ('B')){
+                    } else if (e == ('B')) {
                         firstNum = 11;
-                    }else if(e == ('C')){
+                    } else if (e == ('C')) {
                         firstNum = 12;
-                    }else if(e == ('D')){
+                    } else if (e == ('D')) {
                         firstNum = 13;
-                    }else if(e == ('E')){
+                    } else if (e == ('E')) {
                         firstNum = 14;
-                    }else if(e == ('F')){
+                    } else if (e == ('F')) {
                         firstNum = 15;
-                    }else{
+                    } else {
                         firstNum = Integer.parseInt(Character.toString(e));
                     }
                     return firstNum * secondNum;
