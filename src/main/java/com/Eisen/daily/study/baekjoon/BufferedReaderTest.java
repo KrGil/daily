@@ -21,5 +21,10 @@ public class BufferedReaderTest {
         while(br.ready()){
             br.readLine();
         }
+        String line = "";
+        while((line = br.readLine()) != null){
+            System.out.println("line = " + line);
+        }
+
     }
 }
