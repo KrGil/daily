@@ -3,7 +3,9 @@ package com.Eisen.daily.study.baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class SomeRelations_20921 {
@@ -15,28 +17,23 @@ public class SomeRelations_20921 {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        int[] arr = new int[N];
         // 5 7
-        int smallestNum = 1;
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println("i = " + i);
-            System.out.println("N = " + N);
-            System.out.println("K = " + K);
-            System.out.println("smallestNum = " + smallestNum);
-
-            if((N - 1) <= K){
-                arr[i] = N;
-                K -= (N - 1);
-                int heads = N;
-                smallestNum = Arrays.stream(arr).anyMatch(e -> e == heads) ? smallestNum++ : smallestNum;
-
-            }else{
-                arr[i] = smallestNum;
-                smallestNum++;
-            }
-            N--;
+        List<Integer> list = new ArrayList<>();
+        for (int i = 1; i <= N; i++) {
+            list.add(i);
         }
-        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+        // 1 2 3 4 5
+        System.out.println("list.toString() = " + list.toString());
+        int place = 0;
+        while(K > 0){
+            int last = list.remove(N-1); // 5
+            int move = Math.min(K, N - 1 - place); // 7, 5 - 1 - 0 // 4
+            int newIndex = N - move - 1; // 5 - 4 - 1;
+            place = newIndex + 1; // 1+1
+            list.add(newIndex, last);
+            K -= move;
+        }
+        System.out.println("list.toString() = " + list.toString());
 
     }
 }
