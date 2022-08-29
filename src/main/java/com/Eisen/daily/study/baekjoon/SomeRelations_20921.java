@@ -28,7 +28,7 @@ public class SomeRelations_20921 {
         while(K > 0){
             int last = list.remove(N-1); // 5
             int move = Math.min(K, N - 1 - place); // 7, 5 - 1 - 0 // 4
-            int newIndex = N - move - 1; // 5 - 4 - 1;
+            int newIndex = N - move - 1; // 5 - 4 - 1;sdasdasdasd
             place = newIndex + 1; // 1+1
             list.add(newIndex, last);
             K -= move;
