@@ -15,9 +15,7 @@ import java.util.StringTokenizer;
  * 2022/08/21                eisen             최초 생성
  */
 
-public class BojTemplate {
-//public class Main {
-
+public class Main {
     void main() throws IOException {
         //input
         String line = br.readLine();
@@ -36,7 +34,7 @@ public class BojTemplate {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     public static void main(String[] args) throws IOException {
-//        new Main().main();
+        new Main().main();
         bw.flush();
         bw.close();
         br.close();
