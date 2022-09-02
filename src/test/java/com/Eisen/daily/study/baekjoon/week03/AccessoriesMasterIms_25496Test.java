@@ -26,6 +26,6 @@ class AccessoriesMasterIms_25496Test {
     @DisplayName("장인문제 테스트")
     void cal() throws IOException {
         AccessoriesMasterIms_25496 test = new AccessoriesMasterIms_25496();
-        test.solution();
+        test.scanTemplate();
     }
 }

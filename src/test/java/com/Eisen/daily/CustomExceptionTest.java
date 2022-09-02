@@ -1,6 +1,6 @@
 package com.Eisen.daily;
 
-import com.Eisen.daily.exception_orElseThrow.CustomException;
+import com.Eisen.daily.testCoding.CustomException;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
