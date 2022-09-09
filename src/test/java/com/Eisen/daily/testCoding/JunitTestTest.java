@@ -7,6 +7,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -15,32 +16,34 @@ import java.lang.reflect.Method;
 class JunitTestTest {
 
     @InjectMocks
-    private JunitTest junitTest;
+    private PrivateMethodClass junitTest;
 
     @Mock
-    private JunitTest.ServiceObj service;
+    private PrivateMethodClass.ServiceObj service;
 
     @Mock
-    private JunitTest.EntityObj entity;
+    private PrivateMethodClass.EntityObj entity;
 
     @Mock
-    private JunitTest.DTOObj dto;
+    private PrivateMethodClass.DTOObj dto;
 
 
     @Test
     @DisplayName("private Method 검증하기")
     public void convertToDTOTest() throws Exception{
         /* Reflection */
-        Method target = JunitTest.class.getDeclaredMethod("convertToEntity", JunitTest.DTOObj.class);
+        Method target = PrivateMethodClass.class.getDeclaredMethod("convertToEntity", PrivateMethodClass.DTOObj.class);
         target.setAccessible(true);
 
         // given
-        Mockito.when(service.generateString(Mockito.anyInt())).thenReturn("Hello Eisen!");
+        String str = "Hello Eisen!";
+        Mockito.when(service.someObject(Mockito.anyInt())).thenReturn(str);
 
         // when
         target.invoke(junitTest, dto);
-
+        ReflectionTestUtils.invokeMethod(junitTest, "convertToEntity", dto);
+        
         // then
-        Mockito.verify(service, Mockito.atLeastOnce()).generateString(3);
+        Mockito.verify(service, Mockito.atLeastOnce()).someObject(3);
     }
 }

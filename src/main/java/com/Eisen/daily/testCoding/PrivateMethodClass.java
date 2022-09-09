@@ -1,20 +1,20 @@
 package com.Eisen.daily.testCoding;
 
-public class JunitTest {
+public class PrivateMethodClass {
 
     ServiceObj serviceObj;
 
-    public JunitTest(ServiceObj serviceObj){
+    public PrivateMethodClass(ServiceObj serviceObj){
         this.serviceObj = serviceObj;
     }
 
     private EntityObj convertToEntity(DTOObj dto){
-        System.out.println("entity = " + serviceObj.generateString(3));
+        System.out.println("entity = " + serviceObj.someObject(3));
         return new EntityObj();
     }
 
     public class ServiceObj{
-        public String generateString(Integer num){
+        public String someObject(Integer num){
             System.out.println("num = " + num);
             return "hello World!";
         }
