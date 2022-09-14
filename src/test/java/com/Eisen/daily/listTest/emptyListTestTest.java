@@ -1,8 +1,7 @@
 package com.Eisen.daily.listTest;
 
+import com.Eisen.daily.testCoding.listTest.emptyListTest;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class emptyListTestTest {
     @Test

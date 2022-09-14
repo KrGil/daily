@@ -1,5 +1,6 @@
 package com.Eisen.daily.lombok;
 
+import com.Eisen.daily.testCoding.lombok.LombokClient;
 import org.junit.jupiter.api.Test;
 
 

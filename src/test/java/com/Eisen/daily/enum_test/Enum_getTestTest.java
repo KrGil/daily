@@ -1,6 +1,7 @@
 package com.Eisen.daily.enum_test;
 
-import com.Eisen.daily.enum_test.Enum_getTest.*;
+import com.Eisen.daily.testCoding.enum_test.Enum_getTest;
+import com.Eisen.daily.testCoding.enum_test.Enum_getTest.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

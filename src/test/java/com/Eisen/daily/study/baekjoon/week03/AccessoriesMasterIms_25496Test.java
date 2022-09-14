@@ -1,11 +1,10 @@
 package com.Eisen.daily.study.baekjoon.week03;
 
+import com.Eisen.daily.study.baekjoon.week02.AccessoriesMasterIms_25496;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * packageName :  com.Eisen.daily.study.baekjoon.week03
