@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -47,4 +48,22 @@ class NullTestTest {
             System.out.println("NPE 발생! err: "+ ExceptionUtils.getStackTrace(e));
         }
     }
+
+    @Test
+   @DisplayName("Optional에서 map을 먼저 사용하면 어떻게 결과가 나오는지 확인")
+    void optionalTest(){
+        String a = null;
+        String strResult = optionalOp("123");
+        String nullResult = optionalOp(null);
+
+        System.out.println("strResult = " + strResult);
+        System.out.println("nullResult = " + nullResult);
+
+    }
+    String optionalOp(String str){
+        return  Optional.ofNullable(str)
+            .map(e -> e.substring(0,1))
+            .orElse("");
+    }
+
 }

@@ -5,4 +5,5 @@ public class StringTest {
         String.format("");
         System.out.println("String.format(\"\\\"id\\\" : \\\"%s\\\"\", \"id\") = " + String.format("\"id\" : \"%s\"", "id"));
     }
+
 }
