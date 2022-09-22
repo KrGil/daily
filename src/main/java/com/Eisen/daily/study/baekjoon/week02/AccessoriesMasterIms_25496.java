@@ -28,7 +28,7 @@ public class AccessoriesMasterIms_25496 {
         br.close();
     }
 
-    void scanTemplate() throws IOException {
+    public void scanTemplate() throws IOException {
         // input
         StringTokenizer st = new StringTokenizer(br.readLine());
         int fatigueRate = Integer.parseInt(st.nextToken());

@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 public class Enum_getTest {
 //    @JsonProperty("Test1")
-    TestEnum1 enumTest;
-    String str1;
+    public TestEnum1 enumTest;
+    public String str1;
 //    @JsonProperty("Test2")
 //    TestEnum2 enumTest2;
 
