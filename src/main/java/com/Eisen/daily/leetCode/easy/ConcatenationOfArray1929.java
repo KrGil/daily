@@ -2,6 +2,8 @@ package com.Eisen.daily.leetCode.easy;
 
 import com.tistory.eisen.Eisen;
 
+import java.util.Arrays;
+
 public class ConcatenationOfArray1929 {
 
     public int[] getConcatenation(int[] nums) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
@@ -11,16 +13,13 @@ public class ConcatenationOfArray1929 {
 //        - ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
 //        - ans = [1,2,1,1,2,1]
         
-        int length =  nums.length;
-        int[] result = new int[length * 2];
-        int j = 0;
-        for (int i = 0; i < result.length; i++) {
-            j = i;
-            if (i > (length-1)) {
-                j = i - (length);
-            }
-            result[i] = nums[j];
+        int n =  nums.length;
+        int[] result = new int[n * 2];
+        for (int i = 0; i < n; i++) {
+            result[i] = nums[i];
+            result[i + (n)] = nums[i];
         }
-        return null;
+        System.out.println("Arrays.toString(result) = " + Arrays.toString(result));
+        return result;
     }
 }
