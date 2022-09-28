@@ -20,6 +20,7 @@ public class ConcatenationOfArray1929 {
             result[i + (n)] = nums[i];
         }
         System.out.println("Arrays.toString(result) = " + Arrays.toString(result));
+
         return result;
     }
 }

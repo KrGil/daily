@@ -1,5 +1,6 @@
 package com.Eisen.daily.testCoding;
 
+import com.tistory.eisen.Eisen;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,5 +18,4 @@ class ObjectTestTest {
         ObjectTest.ObTest aTest = new ObjectTest.ObTest();
         System.out.println("aTest = " + aTest.getA());
     }
-
 }
