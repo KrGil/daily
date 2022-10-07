@@ -5,6 +5,7 @@ public class ShuffleTheArray_1470 {
     //Output: [1,2,1,2]
     public int[] shuffle(int[] nums, int n) {
         
+
         return null;
     }
 }
