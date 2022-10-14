@@ -7,8 +7,8 @@ import java.util.Optional;
 
 public class OptionalMapSimulation {
     public static class TestDTO{
-        String a;
-        String b;
+        public String a;
+        public String b;
     }
     public Pair<String, Optional<TestDTO>> simulation(String input) {
         TestDTO testDTO = new TestDTO();
