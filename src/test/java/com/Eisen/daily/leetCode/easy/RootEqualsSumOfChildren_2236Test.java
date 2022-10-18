@@ -1,6 +1,5 @@
 package com.Eisen.daily.leetCode.easy;
 
-import com.Eisen.daily.leetCode.easy.RootEqualsSumOfChildren_2236.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
