@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class CheckIfTheSentenceIsPangram_1832 {
     // "thequickbrownfoxjumpsoverthelazydog"
     public boolean checkIfPangram(String sentence) {
-        sentence.chars().distinct().count()
+        sentence.chars().distinct().count();
         return Arrays.stream(sentence.split("")).distinct().count() == 26;
     }
 }

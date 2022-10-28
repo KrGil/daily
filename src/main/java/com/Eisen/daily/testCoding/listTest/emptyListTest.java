@@ -11,4 +11,10 @@ public class emptyListTest {
         test = test.stream().collect(Collectors.toList());
         return test;
     }
+    public List<String> testSort(){
+        List<String> test = new ArrayList<>();
+        test = test.stream().collect(Collectors.toList());
+//        test.sort();
+        return test;
+    }
 }
