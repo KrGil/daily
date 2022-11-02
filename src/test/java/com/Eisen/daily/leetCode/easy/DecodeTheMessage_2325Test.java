@@ -11,6 +11,6 @@ class DecodeTheMessage_2325Test {
     void test(){
         String key = "the quick brown fox jumps over the lazy dog";
         String message = "vkbs bs t suepuv";
-        test.decodeMessage(key, message);
+        System.out.println(test.decodeMessage(key, message));
     }
 }

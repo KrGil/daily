@@ -6,20 +6,25 @@ import java.util.Map;
 public class DecodeTheMessage_2325 {
 
     public String decodeMessage(String key, String message) {
-        System.out.println("key = " + key);
-        Map<Character, String> mappingTable = new HashMap<>();
+        Map<Character, Character> mappingTable = new HashMap<>();
+        mappingTable.put(' ', ' ');
         key = key.replace(" ", "");
-        System.out.println("mappingTable = " + mappingTable);
         char[] keyArr = key.toCharArray();
         int num = 97;
+        int cnt = 0;
+        char[] messageArr = message.toCharArray();
         for (int i = 0; i < keyArr.length; i++) {
-            mappingTable.put(keyArr[i], "");
-            System.out.println("keyArr[i] = " + keyArr[i]);
-
-            System.out.println((char) (num + i));
-
+            if(mappingTable.containsKey(keyArr[i])){
+                continue;
+            }else{
+                mappingTable.put(keyArr[i], (char) (num+cnt));
+            }
+            cnt++;
         }
-//        mappingTable.put()
-        return "";
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < message.length(); i++) {
+            sb.append(mappingTable.get(messageArr[i]));
+        }
+        return sb.toString();
     }
 }
