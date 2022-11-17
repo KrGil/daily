@@ -12,12 +12,13 @@ public class Enum_getTest {
 //    TestEnum2 enumTest2;
 
     public enum TestEnum1{
-        AA("N/A");
-
+        AA("N/A", "123"),
+        BB("AD", "123");
         String value;
-
-        TestEnum1(String value){
+        String key;
+        TestEnum1(String value, String key){
             this.value = value;
+            this.key = key;
         }
         @JsonValue
         public String getValue(){

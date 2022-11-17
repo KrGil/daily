@@ -28,6 +28,10 @@ dependencies {
     }
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // https://mvnrepository.com/artifact/org.apache.clerezza.ext/org.json.simple
+    implementation group: 'org.apache.clerezza.ext', name: 'org.json.simple', version: '0.4'
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'

@@ -6,6 +6,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 class Enum_getTestTest {
 
     @Test
@@ -18,5 +21,12 @@ class Enum_getTestTest {
 //        enum1.enumTest2 = TestEnum2.NA;
 
         System.out.println(jsonMapper.writeValueAsString(enum1));
+    }
+
+    @Test
+    void EnumValues테스트() {
+        Enum_getTest e = new Enum_getTest();
+        TestEnum1 a = e.getEnumTest();
+        System.out.println(a.values());
     }
 }
