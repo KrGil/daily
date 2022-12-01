@@ -13,6 +13,10 @@ class SpringBootFieldStaticSampleTest {
 
     @Test
     void test(){
+        Long l1 = Long.valueOf(1234567);
+        Long l2 = Long.valueOf(1234567);
+        boolean same = l1 == l2;
+        System.out.println("same = " + same);
         test.test();
     }
 
