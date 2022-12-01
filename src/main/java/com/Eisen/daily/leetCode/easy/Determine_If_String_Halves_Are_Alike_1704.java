@@ -4,6 +4,7 @@ import org.apache.commons.lang3.CharUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
+import java.util.Set;
 import java.util.function.Supplier;
 
 public class Determine_If_String_Halves_Are_Alike_1704 {
@@ -28,7 +29,24 @@ public class Determine_If_String_Halves_Are_Alike_1704 {
                 }
             }
         }
+        return cnt == 0;
+    }
+    public boolean halvesAreAlikeSet(String s) {
+        Set<Character> vowels = Set.of('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U');
+        char[] sChars = s.toCharArray();
 
+        int cnt = 0;
+        int halfLength = sChars.length / 2;
+        for (int i = 0; i < halfLength; i++) {
+            for (Character vowel : vowels) {
+                if(vowel == sChars[i]){
+                    cnt++;
+                }
+                if (vowel == sChars[i+halfLength]) {
+                    cnt--;
+                }
+            }
+        }
         return cnt == 0;
     }
 }

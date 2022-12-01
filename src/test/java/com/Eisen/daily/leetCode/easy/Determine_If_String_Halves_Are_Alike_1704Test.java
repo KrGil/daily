@@ -14,8 +14,11 @@ class Determine_If_String_Halves_Are_Alike_1704Test {
     void test(){
         String testData = "book";
         assertTrue(test.halvesAreAlike(testData));
+        assertTrue(test.halvesAreAlikeSet(testData));
+
         testData = "textBook";
         assertFalse(test.halvesAreAlike(testData));
+        assertFalse(test.halvesAreAlikeSet(testData));
 
     }
 }
