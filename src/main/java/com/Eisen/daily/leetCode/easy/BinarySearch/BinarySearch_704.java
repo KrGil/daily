@@ -1,4 +1,4 @@
-package com.Eisen.daily.leetCode.BinarySearch;
+package com.Eisen.daily.leetCode.easy.BinarySearch;
 
 public class BinarySearch_704 {
     // 1. Calculate the mid element of the collection.

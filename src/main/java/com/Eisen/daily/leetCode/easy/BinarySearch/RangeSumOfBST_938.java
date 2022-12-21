@@ -1,4 +1,6 @@
-package com.Eisen.daily.leetCode.easy;
+package com.Eisen.daily.leetCode.easy.BinarySearch;
+
+import com.Eisen.daily.leetCode.easy.TreeNode;
 
 public class RangeSumOfBST_938 {
 

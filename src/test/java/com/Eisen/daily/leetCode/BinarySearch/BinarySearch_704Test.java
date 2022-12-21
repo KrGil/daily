@@ -1,9 +1,8 @@
 package com.Eisen.daily.leetCode.BinarySearch;
 
+import com.Eisen.daily.leetCode.easy.BinarySearch.BinarySearch_704;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BinarySearch_704Test {
     BinarySearch_704 bs = new BinarySearch_704();
