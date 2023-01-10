@@ -1,4 +1,6 @@
-package com.Eisen.daily.leetCode.easy;
+package com.Eisen.daily.leetCode.easy.BinaryTree;
+
+import com.Eisen.daily.leetCode.easy.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,4 +31,20 @@ public class BinaryTreePreorderTraversal_144 {
         }
         return result;
     }
+    public List<Integer> preorderTraversal_recursive(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        result = preorderTraversal_recursive(root, result);
+        return result;
+    }
+    public List<Integer> preorderTraversal_recursive(TreeNode root, List<Integer> result) {
+        if(root == null) return result;
+
+        result.add(root.val);
+        preorderTraversal_recursive(root.left, result);
+        preorderTraversal_recursive(root.right, result);
+        return result;
+    }
+
+
+
 }
