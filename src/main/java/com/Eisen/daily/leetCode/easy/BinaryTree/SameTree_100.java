@@ -1,7 +1,6 @@
 package com.Eisen.daily.leetCode.easy.BinaryTree;
 
 import com.tistory.eisen.TreeNode;
-import org.springframework.util.ObjectUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,14 +23,13 @@ public class SameTree_100 {
         preorderTraversal(q, list2);
         return list.equals(list2);
     }
-    public List<Integer> preorderTraversal(TreeNode p, List<Integer> list){
+    public void preorderTraversal(TreeNode p, List<Integer> list){
         if(p == null) {
             list.add(null);
-            return list;
+            return;
         }
         list.add(p.val);
         preorderTraversal(p.left, list);
         preorderTraversal(p.right, list);
-        return list;
     }
 }
