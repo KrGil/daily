@@ -9,11 +9,11 @@ public class FindCenterOfStarGraph_1791 {
     public int findCenter(int[][] edges) {
         Set<Integer> res = new HashSet<Integer>();
         for(int i = 0; i < edges.length; i++) {
-            for(int j : edges[i]) {
-                if (res.contains(j)) {
-                    return j;
+            for(int node : edges[i]) {
+                if (res.contains(node)) {
+                    return node;
                 }
-                res.add(j);
+                res.add(node);
             }
         }
         return -1;

@@ -17,11 +17,16 @@ import java.util.List;
  */
 public class SameTree_100 {
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        List<Integer> list = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
-        preorderTraversal(p, list);
-        preorderTraversal(q, list2);
-        return list.equals(list2);
+        if (p == null && q == null) {
+            return true;
+        }
+        if (p == null || q == null) {
+            return false;
+        }
+        if(p.val != q.val) {
+            return false;
+        }
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
     public void preorderTraversal(TreeNode p, List<Integer> list){
         if(p == null) {
