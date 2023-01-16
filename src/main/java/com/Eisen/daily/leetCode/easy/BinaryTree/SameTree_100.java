@@ -27,6 +27,12 @@ public class SameTree_100 {
             return false;
         }
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+//        List<Integer> list = new ArrayList<Integer>();
+//        List<Integer> list1 = new ArrayList<Integer>();
+//        preorderTraversal(p, list);
+//        preorderTraversal(q, list1);
+//        return list.equals(list1);
+
     }
     public void preorderTraversal(TreeNode p, List<Integer> list){
         if(p == null) {

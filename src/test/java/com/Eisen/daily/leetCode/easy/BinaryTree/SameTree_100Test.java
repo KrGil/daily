@@ -33,9 +33,7 @@ class SameTree_100Test {
         TreeNode node3 = new TreeNode(5);
         TreeNode node4 = new TreeNode(15);
         q.left = node3;
-        q.right = node4;
-        node3.left = null;
-        node3.right = null;
+        node3.right = node4;
 
         assertFalse(test.isSameTree(p, q));
     }

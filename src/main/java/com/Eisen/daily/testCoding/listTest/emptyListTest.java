@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class emptyListTest {
     public List<String> testEmpty() {
         List<String> test = new ArrayList<>();
-        test = test.stream().collect(Collectors.toList());
+        test = new ArrayList<>(test);
         return test;
     }
     public List<String> testSort(){
