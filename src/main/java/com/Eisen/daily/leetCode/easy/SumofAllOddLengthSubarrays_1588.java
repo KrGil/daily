@@ -20,7 +20,7 @@ public class SumofAllOddLengthSubarrays_1588 {
                 cnt += arr[i] + arr[oddIndex];
             }
             oddIndex+=2;
-            
+
         }
         return 0;
     }
