@@ -1,19 +1,37 @@
 package com.Eisen.daily.testCoding.validation;
 
+import com.tistory.eisen.Eisen;
+import org.apache.commons.lang3.builder.ToStringExclude;
+import org.junit.jupiter.api.Test;
+
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 public class CustomValidation {
-    private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+    private static final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
-    public static void main(String[] args) {
-
+    static class CustomTestClass{
+        @NotNull
+        int a;
+        int b;
+        CustomTestClass(int a, int b) {
+            this.a = a;
+            this.b = b;
+        }
     }
 
-    private <T> void validate(T input){
+    @Test
+    void validationTest(){
+        CustomTestClass test = new CustomTestClass(1,2);
+        validate(test);
+    }
+
+    private static <T> void validate(T input){
         Set<ConstraintViolation<T>> violations =  validator.validate(input);
+        Eisen.collectViolationMessages(violations);
         if(violations.size() > 0){
             String errMsg = violations.stream()
                 .map(e -> String.format("%s, %s",e.getPropertyPath(), e.getMessage()))
