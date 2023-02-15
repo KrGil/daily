@@ -1,5 +1,7 @@
 package com.Eisen.daily.leetCode.easy;
 
+import com.tistory.eisen.TreeNode;
+
 public class SearchInABinarySearchTree_700 {
     // recursion method
     public TreeNode searchBST(TreeNode root, int val) {

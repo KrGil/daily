@@ -1,5 +1,7 @@
 package com.Eisen.daily.leetCode.easy;
 
+import com.tistory.eisen.TreeNode;
+
 public class RootEqualsSumOfChildren_2236 {
 
 
