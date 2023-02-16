@@ -23,14 +23,18 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation ('com.github.KrGil:eisenUtils:master-SNAPSHOT') {
+
+    implementation ('com.github.KrGil:eisenUtils:1.0.1') {
         exclude group: 'org.slf4j', module: 'slf4j-simple'
     }
+    implementation 'com.github.Shane-Park:psh:master-SNAPSHOT'
+
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     // https://mvnrepository.com/artifact/org.apache.clerezza.ext/org.json.simple
     implementation group: 'org.apache.clerezza.ext', name: 'org.json.simple', version: '0.4'
+    implementation 'junit:junit:4.13.1'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

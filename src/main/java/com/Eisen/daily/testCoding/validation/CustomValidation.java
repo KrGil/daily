@@ -1,5 +1,6 @@
 package com.Eisen.daily.testCoding.validation;
 
+import com.tistory.eisen.CustomValid;
 import com.tistory.eisen.Eisen;
 import org.apache.commons.lang3.builder.ToStringExclude;
 import org.junit.jupiter.api.Test;
@@ -31,7 +32,8 @@ public class CustomValidation {
 
     private static <T> void validate(T input){
         Set<ConstraintViolation<T>> violations =  validator.validate(input);
-        Eisen.collectViolationMessages(violations);
+//        Eisen.collectViolationMessages(violations);
+
         if(violations.size() > 0){
             String errMsg = violations.stream()
                 .map(e -> String.format("%s, %s",e.getPropertyPath(), e.getMessage()))

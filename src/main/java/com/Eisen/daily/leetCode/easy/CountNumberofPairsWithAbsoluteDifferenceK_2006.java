@@ -1,5 +1,7 @@
 package com.Eisen.daily.leetCode.easy;
 
+import com.github.shanepark.Ps;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,5 +24,6 @@ public class CountNumberofPairsWithAbsoluteDifferenceK_2006 {
             result += map.getOrDefault(nums[i] + k, 0)+map.getOrDefault(nums[i] - k, 0);
         }
         return result;
+
     }
 }
