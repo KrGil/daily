@@ -1,6 +1,6 @@
 package com.Eisen.daily.leetCode.easy.BinarySearch;
 
-import com.Eisen.daily.leetCode.easy.TreeNode;
+import com.tistory.eisen.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -24,10 +24,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    implementation ('com.github.KrGil:eisenUtils:1.0.1') {
+    // jitpack
+    implementation ('com.github.KrGil:eisenUtils:master-SNAPSHOT') {
         exclude group: 'org.slf4j', module: 'slf4j-simple'
     }
-    implementation 'com.github.Shane-Park:psh:master-SNAPSHOT'
+    implementation 'com.github.Shane-Park:psh:1.0.0'
 
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -43,6 +44,7 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
+    implementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-test'
 }

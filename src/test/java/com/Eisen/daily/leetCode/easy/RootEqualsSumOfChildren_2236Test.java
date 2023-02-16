@@ -1,9 +1,8 @@
 package com.Eisen.daily.leetCode.easy;
 
+import com.tistory.eisen.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
 class RootEqualsSumOfChildren_2236Test {

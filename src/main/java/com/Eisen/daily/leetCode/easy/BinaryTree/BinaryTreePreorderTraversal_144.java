@@ -1,6 +1,6 @@
 package com.Eisen.daily.leetCode.easy.BinaryTree;
 
-import com.Eisen.daily.leetCode.easy.TreeNode;
+import com.tistory.eisen.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
