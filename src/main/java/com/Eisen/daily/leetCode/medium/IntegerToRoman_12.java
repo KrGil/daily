@@ -47,15 +47,12 @@ public class IntegerToRoman_12 {
 
             }
             if (i == 2) {
-                map.getOrDefault(arr[i * 100], 0);
-
-                result.append()
+//                map.getOrDefault(arr[i * 100], 0);
             }
             if (i == 3) {
                 result.append("M");
             }
             map.get(arr[i]);
-            result.append();
         }
 
         return map.toString();
