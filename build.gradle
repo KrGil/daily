@@ -25,9 +25,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
     // jitpack
-    implementation ('com.github.KrGil:eisenUtils:master-SNAPSHOT') {
+    implementation ('com.github.KrGil:eisenUtils:1.0.1') {
         exclude group: 'org.slf4j', module: 'slf4j-simple'
     }
+
     implementation 'com.github.Shane-Park:psh:master-SNAPSHOT'
 
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
