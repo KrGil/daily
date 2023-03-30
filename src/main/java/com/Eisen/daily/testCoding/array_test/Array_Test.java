@@ -15,4 +15,10 @@ public class Array_Test {
     public int test (){
         return 5 / 2;
     }
+
+    public static void main(String[] args) {
+//        int a[4] = {
+//            1, 2, 3}
+//
+    }
 }
