@@ -1,0 +1,22 @@
+
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    const res = [];
+    for (let i = 0; i < arr.length; i++) {
+        res.push(fn(arr[i], i));
+    }
+    return res;
+};
+
+
+//runtime:57 ms
+//memory:41.9 MB
