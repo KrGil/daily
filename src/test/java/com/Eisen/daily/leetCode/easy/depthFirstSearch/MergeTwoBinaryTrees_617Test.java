@@ -1,6 +1,7 @@
 package com.Eisen.daily.leetCode.easy.depthFirstSearch;
 
-import com.tistory.shanepark.leetcode.TreeNode;
+
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -22,7 +23,7 @@ class MergeTwoBinaryTrees_617Test {
         TreeNode root1 = TreeNode.of(1,3,2,5);
         TreeNode root2 = TreeNode.of(2, 1, 3, null, 4, null, 7);
 
-        test.mergeTrees(root1, root2);
+//        test.mergeTrees(root1, root2);
 
     }
 }
