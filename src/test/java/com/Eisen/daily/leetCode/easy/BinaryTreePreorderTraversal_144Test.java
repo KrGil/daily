@@ -47,8 +47,8 @@ class BinaryTreePreorderTraversal_144Test {
             System.out.println(aDouble == -0d);
         }
 
-        System.out.println(new Double(-0d).hashCode());
-        System.out.println(new Double(0d).hashCode());
+//        System.out.println(new Double(-0d).hashCode());
+//        System.out.println(new Double(0d).hashCode());
     }
 
     @Test
