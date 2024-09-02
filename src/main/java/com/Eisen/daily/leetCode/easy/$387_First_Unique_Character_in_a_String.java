@@ -7,7 +7,7 @@ public class $387_First_Unique_Character_in_a_String {
         for (int i = 0; i < arr.length; i++) {
             char c = arr[i];
             for (int j = 0; j < arr.length; j++) {
-                it(char[u])
+//                it(char[u])
 
             }
         }

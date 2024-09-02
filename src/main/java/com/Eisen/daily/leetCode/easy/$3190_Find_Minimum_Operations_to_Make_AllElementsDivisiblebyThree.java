@@ -8,7 +8,8 @@ public class $3190_Find_Minimum_Operations_to_Make_AllElementsDivisiblebyThree {
         int cnt = 0;
         int a;
         for (int i = 0; i < nums.length; i++) {
-            (nums[i] + 1) % 3 == 0 ? cnt++ : null;
+//            (nums[i] + 1) % 3 == 0 ? cnt++ : null;
         }
+        return 0;
     }
 }

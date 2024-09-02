@@ -1,6 +1,6 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.3'
-    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+//    id 'org.springframework.boot' version '2.7.3'
+//    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
     id 'java'
 }
 
@@ -15,43 +15,43 @@ configurations {
 }
 
 repositories {
-    maven { url 'https://repo.spring.io/release' }
-    maven { url 'https://jitpack.io' }
+//    maven { url 'https://repo.spring.io/release' }
+//    maven { url 'https://jitpack.io' }
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-gradle-plugin
-    implementation 'org.springframework.boot:spring-boot-gradle-plugin:2.7.3'
+//    implementation 'org.springframework.boot:spring-boot-gradle-plugin:2.7.3'
 
     // jitpack
-    implementation ('com.github.KrGil:eisenUtils:1.0.1') {
-        exclude group: 'org.slf4j', module: 'slf4j-simple'
-    }
-    implementation 'io.github.shanepark:psh:1.2.0'
+//    implementation ('com.github.KrGil:eisenUtils:1.0.1') {
+//        exclude group: 'org.slf4j', module: 'slf4j-simple'
+//    }
+//    implementation 'io.github.shanepark:psh:1.2.0'
 
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
+//    implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     // https://mvnrepository.com/artifact/org.apache.clerezza.ext/org.json.simple
     implementation group: 'org.apache.clerezza.ext', name: 'org.json.simple', version: '0.4'
     implementation 'junit:junit:4.13.1'
 
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    runtimeOnly 'com.h2database:h2'
+//    compileOnly 'org.projectlombok:lombok'
+//    annotationProcessor 'org.projectlombok:lombok'
+//    runtimeOnly 'com.h2database:h2'
 
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
+//    testCompileOnly 'org.projectlombok:lombok'
+//    testAnnotationProcessor 'org.projectlombok:lombok'
 
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.0-M1'
 
-    implementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'org.springframework.boot:spring-boot-starter-test'
+//    implementation 'org.springframework.boot:spring-boot-starter-test'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    implementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {

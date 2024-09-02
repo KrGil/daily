@@ -2,7 +2,7 @@ package com.Eisen.daily.codewar.sixthkyu;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
 
 public class Findtheoddint {
 
